@@ -69,7 +69,7 @@ var dimensions = [
     type: String
   },
   {
-    name: "All Sectors",
+    name: "All_Sectors",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
@@ -112,7 +112,7 @@ var dimension = svg.selectAll(".dimension")
     .attr("class", "dimension")
     .attr("transform", function(d) { return "translate(" + x(d.name) + ")"; });
 
-d3.csv("consumption_data.csv", function(data) {
+d3.csv("with_percentages.csv", function(data) {
   dimensions.forEach(function(dimension) {
     dimension.scale.domain(dimension.type === Number
         ? d3.extent(data, function(d) { return +d[dimension.name]; })
