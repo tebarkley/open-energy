@@ -33,17 +33,7 @@ With such a large dataset and a goal of providing a platform to explore the data
   
   -Consolidated  dataframes from different queries to a master dataframe, using state and year as indices
   
-  -Analyzed from this master dataframe. This included:
-  
-    -Creation of matplotlib visualizations of different series within the IPython Notebook
-    
-    -Normalizing data by population
-    
-    -Running correlations and regressions
-    
-    -Selecting and analyzing specific years (typically 2012, the most recent year for which all series were available)
-    
-    -Restructuring and exporting data to csv's for use in D3 visualizations
+  -Analyzed from this master dataframe. This included creation of matplotlib visualizations of different series within the IPython Notebook, normalizing data by population, running correlations and regressions, selecting and analyzing specific years (typically 2012, the most recent year for which all series were available), and restructuring and exporting data to csv's for use in D3 visualizations
 
 We are interested in continuing the project beyond the course, particularly as it provides an initial platform for more specific questions about electricity production. We aim to consolidate our different visualizations from IPython, D3 and Tableau into a more accessible framework in which users can better explore the analyses and filter through the layers of data (for instance, selecting a regression data point causes visualizations to filter or highlight on that series). As structured right now, our analysis is quite broad and piecemeal. By linking our analyses and visualizatons together we can help users answer the specific questions they may have.
 
