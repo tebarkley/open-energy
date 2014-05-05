@@ -15,7 +15,7 @@ We found that a bulk data download was faster than repeatedly accessing the EIA 
 
 It is difficult to identify specific results that we worked towards from such an expansive exploration of a large dataset. However, as we worked through the different variables we identified a few specific results that we found particularly surprising or which confirmed our assumptions. These included:
 
-  -Interesting correlations between production and price. Coal production was negatively correlated with price variables. While it was positively correlated with most other sources of electricity production, it was negatively correlated with renewables.
+  -Interesting correlations between production and price. Total production and coal production were negatively correlated with price variables, suggesting that consumers in states which produce a lot of electricity, particularly coal, realize a financial benefit from that production. While coal production was positively correlated with most other sources of electricity production, it was negatively correlated with renewable production. Additionally, while renewable production was negatively correlated with price, nuclear production was positively correlated with price.
   
   -Regional patterns of price. Excluding Hawaii as an outlier, New England clearly had the highest residential electricity prices among regions of the country. California was the only state not in New England or the mid-Atlantic in the top ten of residential electricity prices.
   
