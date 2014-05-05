@@ -14,21 +14,35 @@ Our primary data analysis occurred in IPython, and our master notebook can be ac
 We found that a bulk data download was faster than repeatedly accessing the EIA API, and broke out individual work streams among team members for our initial explorations of production, sales/revenue, import/export and price. As we queried the large electricity dataset we used the Python pandas library to perform our primary statistical analyses, and used some IPython 2.0 widgets to visualize data within the notebook. We also applied Javascript's D3 library to better visualize relationships between variables.
 
 It is difficult to identify specific results that we worked towards from such an expansive exploration of a large dataset. However, as we worked through the different variables we identified a few specific results that we found particularly surprising or which confirmed our assumptions. These included:
+
   -Interesting correlations between production and price. Coal production was negatively correlated with price variables. While it was positively correlated with most other sources of electricity production, it was negatively correlated with renewables.
+  
   -Regional patterns of price. Excluding Hawaii as an outlier, New England clearly had the highest residential electricity prices among regions of the country. California was the only state not in New England or the mid-Atlantic in the top ten of residential electricity prices.
+  
   -Regional patters of production by source. While definitions of renewable electricity vary, we chose to include hydropower as a renewable and exclude nuclear. This led to the Pacific Northwest, led by Washington, to be a clear leader in renewable generation. In contrast, we were surpised that Illinois led the country in nuclear production.
+  
   -Confirmation of limited renewables production across the US. As of 2012, Idaho had the highest proportion of its electricity generation by renewables, but this was just 10.38%. Washington, which generated a much higher total of electricity, was at 9.11%. Only 10 states had greater than 2%.
 
 With such a large dataset and a goal of providing a platform to explore the data, our results were more exploratory than specific. However, reproducing our results is a relatively straightforward process. We drew our data specifically from the ELEC datafile of the EIA bulk download center to ensure that our data was consistent in structure. As noted, the code can be viewed in the IPython notebook linked above. The structure of our process was:
+
   -Identified raw data file location
+  
   -Queried raw data as a JSON by keyword (generally through regular expressions) to pull specific series
+  
   -Compiled  these query results into dictionaries and then dataframes
+  
   -Consolidated  dataframes from different queries to a master dataframe, using state and year as indices
+  
   -Analyzed from this master dataframe. This included:
+  
     -Creation of matplotlib visualizations of different series within the IPython Notebook
+    
     -Normalizing data by population
+    
     -Running correlations and regressions
+    
     -Selecting and analyzing specific years (typically 2012, the most recent year for which all series were available)
+    
     -Restructuring and exporting data to csv's for use in D3 visualizations
 
 We are interested in continuing the project beyond the course, particularly as it provides an initial platform for more specific questions about electricity production. We aim to consolidate our different visualizations from IPython, D3 and Tableau into a more accessible framework in which users can better explore the analyses and filter through the layers of data (for instance, selecting a regression data point causes visualizations to filter or highlight on that series). As structured right now, our analysis is quite broad and piecemeal. By linking our analyses and visualizatons together we can help users answer the specific questions they may have.
