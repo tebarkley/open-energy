@@ -5782,4 +5782,43 @@ button.close {
     display: none !important;
   }
 }
+
+
 /*# sourceMappingURL=bootstrap.css.map */
+
+/*# Additional stuff for the D3*/
+#chord {
+  position: relative;
+ }
+
+
+#circle circle {
+        fill: none;
+        pointer-events: all;
+      }
+path.group {
+        fill-opacity: .8;
+      }
+path.chord {
+        fill-opacity: .8;
+        stroke: #000;
+        stroke-width: .25px;
+      }
+#circle:hover path.fade {
+        display: none;
+      }
+g.fade {
+        opacity: 0;
+      }
+#svgcanvas {
+        position: relative;
+        padding-left: 50px;
+        padding-top: 20px;
+      }
+svg text, h1,h2 {
+        font-family: Arial;
+        text-align: center;
+ }
+ #chord {
+  position: relative;
+ }
